@@ -10,10 +10,11 @@
 
   <h2>Your Egyptian Adventure Starts Here</h2>
 
-  <button onclick="alert('Welcome to Bishom 🚀')" 
-  style="padding:15px 25px;font-size:18px;margin-top:20px;">
-    Enter
-  </button>
+  <a href="app.html">
+    <button style="padding:15px 25px;font-size:18px;margin-top:20px;">
+      Enter
+    </button>
+  </a>
 
 </body>
-</html> 
+</html>
