@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bishom App</title>
+  <title>Bishom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body style="margin:0;font-family:Arial;background:#0f172a;color:white;">
+<body style="margin:0;font-family:Arial;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:white;">
 
-  <div style="padding:20px;max-width:500px;margin:auto;">
+  <!-- LANDING -->
+  <div id="landing" style="display:block;text-align:center;padding:40px;margin-top:120px;">
+    <h1>☥ BISHOM</h1>
+    <p>Web3 Tourism Project</p>
+    <h2>Your Egyptian Adventure Starts Here</h2>
+
+    <button onclick="goApp()" style="padding:15px 25px;font-size:18px;border:none;border-radius:12px;background:#00c853;color:white;margin-top:20px;">
+      Enter App
+    </button>
+  </div>
+
+  <!-- APP -->
+  <div id="app" style="display:none;max-width:500px;margin:auto;padding:20px;">
 
     <h2 style="text-align:center;">☥ Bishom Wallet</h2>
 
     <!-- BALANCE -->
     <div style="
-      background:#1e293b;
+      background:rgba(255,255,255,0.05);
       padding:20px;
-      border-radius:15px;
-      margin-top:20px;
+      border-radius:16px;
       text-align:center;
+      margin-top:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
     ">
       <p style="opacity:0.7;">Your Balance</p>
       <h1>2,750 BISHOM</h1>
@@ -26,18 +39,20 @@
     <!-- BUTTONS -->
     <div style="margin-top:20px;">
 
-      <h3>Quick Actions</h3>
-
-      <button onclick="show('explore')" style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#2563eb;color:white;">
-        Explore Egypt
+      <button onclick="show('explore')" style="width:100%;padding:14px;margin-top:10px;border:none;border-radius:12px;background:#2563eb;color:white;">
+        🗺 Explore Egypt
       </button>
 
-      <button onclick="show('rewards')" style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#16a34a;color:white;">
-        Rewards
+      <button onclick="show('rewards')" style="width:100%;padding:14px;margin-top:10px;border:none;border-radius:12px;background:#16a34a;color:white;">
+        🎁 Rewards
       </button>
 
-      <button onclick="show('wallet')" style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#f59e0b;color:white;">
-        Wallet
+      <button onclick="show('wallet')" style="width:100%;padding:14px;margin-top:10px;border:none;border-radius:12px;background:#f59e0b;color:white;">
+        💰 Wallet
+      </button>
+
+      <button onclick="goBack()" style="width:100%;padding:14px;margin-top:10px;border:none;border-radius:12px;background:#ef4444;color:white;">
+        ⬅ Back
       </button>
 
     </div>
@@ -48,12 +63,23 @@
   </div>
 
   <script>
+
+    function goApp(){
+      document.getElementById("landing").style.display = "none";
+      document.getElementById("app").style.display = "block";
+    }
+
+    function goBack(){
+      document.getElementById("app").style.display = "none";
+      document.getElementById("landing").style.display = "block";
+    }
+
     function show(section){
       let c = document.getElementById("content");
 
       if(section === "explore"){
         c.innerHTML = `
-          <h3>🏛 Attractions in Egypt</h3>
+          <h3>🏛 Egypt Attractions</h3>
           <p>• Pyramids of Giza (+250)</p>
           <p>• Egyptian Museum (+150)</p>
           <p>• Khan El Khalili (+100)</p>
@@ -63,7 +89,7 @@
       if(section === "rewards"){
         c.innerHTML = `
           <h3>🎁 Rewards</h3>
-          <p>You have 8 available rewards</p>
+          <p>8 rewards available</p>
         `;
       }
 
@@ -74,8 +100,9 @@
         `;
       }
     }
+
   </script>
 
 </body>
-</html> 
+</html>
         
