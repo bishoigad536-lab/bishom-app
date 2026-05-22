@@ -11,6 +11,7 @@
 
     <h2 style="text-align:center;">☥ Bishom Wallet</h2>
 
+    <!-- BALANCE -->
     <div style="
       background:#1e293b;
       padding:20px;
@@ -22,23 +23,59 @@
       <h1>2,750 BISHOM</h1>
     </div>
 
+    <!-- BUTTONS -->
     <div style="margin-top:20px;">
+
       <h3>Quick Actions</h3>
 
-      <button style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#2563eb;color:white;">
+      <button onclick="show('explore')" style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#2563eb;color:white;">
         Explore Egypt
       </button>
 
-      <button style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#16a34a;color:white;">
+      <button onclick="show('rewards')" style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#16a34a;color:white;">
         Rewards
       </button>
 
-      <button style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#f59e0b;color:white;">
+      <button onclick="show('wallet')" style="width:100%;padding:12px;margin-top:10px;border:none;border-radius:10px;background:#f59e0b;color:white;">
         Wallet
       </button>
+
     </div>
+
+    <!-- CONTENT -->
+    <div id="content" style="margin-top:20px;"></div>
 
   </div>
 
+  <script>
+    function show(section){
+      let c = document.getElementById("content");
+
+      if(section === "explore"){
+        c.innerHTML = `
+          <h3>🏛 Attractions in Egypt</h3>
+          <p>• Pyramids of Giza (+250)</p>
+          <p>• Egyptian Museum (+150)</p>
+          <p>• Khan El Khalili (+100)</p>
+        `;
+      }
+
+      if(section === "rewards"){
+        c.innerHTML = `
+          <h3>🎁 Rewards</h3>
+          <p>You have 8 available rewards</p>
+        `;
+      }
+
+      if(section === "wallet"){
+        c.innerHTML = `
+          <h3>💰 Wallet</h3>
+          <p>Balance: 2,750 BISHOM</p>
+        `;
+      }
+    }
+  </script>
+
 </body>
-</html>Explore / Rewards / Wallet
+</html> 
+        
