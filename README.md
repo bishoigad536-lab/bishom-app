@@ -1,1 +1,16 @@
-# bishom-app
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bishom</title>
+</head>
+<body style="text-align:center; font-family:Arial; background:#203a43; color:white;">
+
+  <h1 style="margin-top:150px;">Bishom 🚀</h1>
+  <p>Web3 Tourism Project</p>
+
+  <button style="padding:10px 20px; font-size:18px;">
+    Enter
+  </button>
+
+</body>
+</html>
