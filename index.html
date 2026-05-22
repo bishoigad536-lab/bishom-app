@@ -1,37 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bishom</title>
+  <title>BISHOM ☥</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body style="margin:0;font-family:Arial;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:white;display:flex;justify-content:center;align-items:center;height:100vh;">
+<body style="margin:0;font-family:Arial;background:url('https://images.unsplash.com/photo-1539650116574-75c0c6d3c7e7?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;color:white;">
 
-  <div style="text-align:center;max-width:400px;padding:20px;">
+  <div style="background:rgba(0,0,0,0.65);min-height:100vh;padding:20px;">
 
-    <h1 style="font-size:42px;margin-bottom:10px;">☥ BISHOM</h1>
-    <p style="opacity:0.8;margin-bottom:30px;">Web3 Tourism Project</p>
+    <div style="max-width:520px;margin:auto;">
 
-    <h2 style="font-size:18px;margin-bottom:30px;">
-      Your Egyptian Adventure Starts Here
-    </h2>
+      <!-- LOGO -->
+      <div style="text-align:center;margin-top:20px;">
+        <div style="font-size:55px;">☥</div>
+        <h1 style="margin:5px 0;">BISHOM</h1>
+        <p style="opacity:0.8;">Your Egyptian adventure awaits</p>
+      </div>
 
-    <a href="app.html" style="text-decoration:none;">
-      <button style="
-        padding:15px 30px;
-        font-size:18px;
-        border:none;
-        border-radius:12px;
-        cursor:pointer;
-        background:#00c853;
-        color:white;
-        box-shadow:0 10px 25px rgba(0,0,0,0.3);
-      ">
-        Enter App
-      </button>
-    </a>
+      <!-- BALANCE -->
+      <div style="background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);padding:20px;border-radius:18px;margin-top:20px;text-align:center;">
+        <p style="opacity:0.7;">Your Balance</p>
+        <h2>2,750 BISHOM</h2>
 
+        <button style="padding:10px 16px;border:none;border-radius:10px;background:#2563eb;color:white;">
+          View Wallet
+        </button>
+      </div>
+
+      <!-- ACTIONS -->
+      <div style="margin-top:20px;">
+        <h3>Quick Actions</h3>
+
+        <button onclick="show('map')" style="width:100%;padding:14px;margin-top:10px;border:none;border-radius:12px;background:#16a34a;color:white;">
+          🗺 Explore Egypt Map
+        </button>
+
+        <button onclick="show('discover')" style="width:100%;padding:14px;margin-top:10px;border:none;border-radius:12px;background:#f59e0b;color:white;">
+          🇪🇬 Discover Experiences
+        </button>
+      </div>
+
+      <!-- INFO -->
+      <div style="margin-top:20px;">
+        <h3>Achievements</h3>
+        <p>🏅 12 badges earned</p>
+
+        <h3>Rewards</h3>
+        <p>🎁 8 available</p>
+
+        <h3>My Wallet</h3>
+        <p>2,750 points</p>
+      </div>
+
+      <!-- CONTENT -->
+      <div id="content" style="margin-top:20px;"></div>
+
+      <!-- FOOTER -->
+      <div style="text-align:center;margin-top:30px;opacity:0.7;">
+        ☥ BISHOM • Explore Egypt • Web3 Tourism
+      </div>
+
+    </div>
   </div>
 
+  <script>
+    function show(type){
+      let c = document.getElementById("content");
+
+      if(type === "map"){
+        c.innerHTML = `
+          <h3>🏛 Egypt Landmarks</h3>
+          <p>🔺 Pyramids of Giza - 15 km (+250)</p>
+          <p>🏛 Egyptian Museum - 8 km (+150)</p>
+          <p>🛍 Khan El Khalili - 10 km (+100)</p>
+        `;
+      }
+
+      if(type === "discover"){
+        c.innerHTML = `
+          <h3>☥ Featured Experience</h3>
+          <p>Nile Sunset Cruise</p>
+          <p>Earn 500 BISHOM points</p>
+        `;
+      }
+    }
+  </script>
+
 </body>
-</html> 
+</html>
